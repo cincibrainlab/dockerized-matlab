@@ -17,7 +17,7 @@ services:
                   count: all
                   capabilities: [gpu]
         volumes:
-            - '/cblstore/srv:/srv'
+          - '/path_on_host/srv:/srv'
         ports:
             - ${VNCPORTA}:5901
             - ${WEBPORTA}:6080
@@ -31,7 +31,7 @@ services:
         hostname: ${HOSTNAMEB}
         user: matlab
         environment:
-          - MLM_LICENSE_FILE=27000@bmilicensee1.cchmc.org
+          - MLM_LICENSE_FILE=${LICENSESERVER}
           - HOST=${HOSTNAMEB}
           - CUDA_VISIBLE_DEVICES=${CUDAB20g}
         deploy:
@@ -42,7 +42,7 @@ services:
                   count: all
                   capabilities: [gpu]
         volumes:
-            - '/cblstore/srv:/srv'
+            - '/path_on_host/srv:/srv'
         ports:
             - ${VNCPORTB}:5901
             - ${WEBPORTB}:6080
@@ -56,7 +56,7 @@ services:
         hostname: ${HOSTNAMEC}
         user: matlab
         environment:
-          - MLM_LICENSE_FILE=27000@bmilicensee1.cchmc.org
+          - MLM_LICENSE_FILE=${LICENSESERVER}
           - HOST=${HOSTNAMEC}
           - CUDA_VISIBLE_DEVICES=${CUDAC20g}
         deploy:
@@ -67,7 +67,7 @@ services:
                   count: all
                   capabilities: [gpu]
         volumes:
-            - '/cblstore/srv:/srv'
+            - '/path_on_host/srv:/srv'
         ports:
             - ${VNCPORTC}:5901
             - ${WEBPORTC}:6080
@@ -81,7 +81,7 @@ services:
         hostname: ${HOSTNAMED}
         user: matlab
         environment:
-          - MLM_LICENSE_FILE=27000@bmilicensee1.cchmc.org
+          - MLM_LICENSE_FILE=${LICENSESERVER}
           - HOST=${HOSTNAMED}
           - CUDA_VISIBLE_DEVICES=${CUDAD10g}
         deploy:
@@ -92,7 +92,7 @@ services:
                   count: all
                   capabilities: [gpu]
         volumes:
-            - '/cblstore/srv:/srv'
+            - '/path_on_host/srv:/srv'
         ports:
             - ${VNCPORTD}:5901
             - ${WEBPORTD}:6080
