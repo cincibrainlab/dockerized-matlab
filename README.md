@@ -20,7 +20,9 @@ git clone https://github.com/yourusername/eeg-analysis-matlab-docker.git
 cd eeg-analysis-matlab-docker
 ```
 
-Replace the placeholders in the env_vars.sh file with your specific values:
+Replace the placeholders in the .env file with your specific values:
+https://docs.docker.com/compose/environment-variables/set-environment-variables/
+
 ```bash
 CONTAINERNAMEA=<container_name_A>
 CONTAINERNAMEB=<container_name_B>
