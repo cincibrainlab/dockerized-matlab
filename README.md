@@ -1,6 +1,8 @@
 # EEG Analysis with Matlab in Docker Containers
 This repository contains scripts and resources for setting up and running multiple instances of Matlab in Docker containers, specifically optimized for high volume EEG analysis labs. By leveraging Docker and Matlab, users can efficiently utilize resources, collaborate easily, and streamline their EEG analysis workflows.
 
+See blog post: https://lonelyneuron.substack.com/p/matlab-in-docker-containers
+
 ## Features
 Run multiple Matlab instances on a single computer
 Access Matlab instances through a web browser
